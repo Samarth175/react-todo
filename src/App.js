@@ -34,10 +34,7 @@ class App extends React.Component{
   }
 
   updateItemStatus(id){
-    const newItem = {
-      id: i
-    }
-    this.setState({list: this.state.list.map(item => (item.id === id ? Object.assign({},):item))})
+    this.setState({list: this.state.list.map(item => (item.id === id ? Object.assign(item,{done: !item.done}):item))})
   }
 
   updateInput(input) {
